@@ -1,0 +1,46 @@
+<div 
+  class="fixed top-0 left-0 z-10 bg-white w-full"
+  x-cloak 
+  x-show="menu"
+  x-init="window.addEventListener('scroll', () => {  if (menu) {  menu = false; } });">
+
+  {{ partial:layout/inner class="relative" }}
+    <a 
+      href="javascript:;" 
+      x-on:click="menu = ! menu" 
+      title="Menü anzeigen"
+      :class="{ 'is-active': menu === true }"
+      class="absolute right-18 top-18 w-45 h-21">
+      {{ partial:icons/cross class="w-full h-auto" }}
+    </a>
+  {{ /partial:layout/inner }}
+
+  <nav class="min-h-dvh w-full flex flex-col justify-center items-center">
+    <ul class="flex flex-col gap-y-35">
+      {{ nav:main_navigation }}
+        {{ partial:menu/item }}
+      {{ /nav:main_navigation }}
+    </ul>
+    <ul class="flex flex-col gap-y-15 mt-35">
+      <li>
+        <a 
+          href="/kontakt"
+          aria-label="Kontakt"
+          @click="menu = false"
+          class="block w-full text-center text-sm text-black hover:text-redion transition-colors duration-200">
+          Kontakt
+        </a>
+      </li>
+      <li>
+        <a 
+          href="/kontakt#impressum"
+          aria-label="Impressum"
+          @click="menu = false"
+          class="block w-full text-center text-sm text-black hover:text-redion transition-colors duration-200">
+          Impressum
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</div>

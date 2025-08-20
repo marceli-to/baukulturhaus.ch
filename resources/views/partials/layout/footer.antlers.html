@@ -1,0 +1,27 @@
+{{# <footer class="py-20 md:py-40 mt-60 md:mt-0">
+  {{ partial:layout/inner }}
+    <div class="text-sm mb-20">Trägerorganisationen</div>
+    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-y-25 md:gap-y-0 md:gap-x-25">
+      <a href="https://forum-architektur.ch/" target="_blank" class="max-w-[204px] group" aria-label="Webseite Forum Architektur">
+        {{ partial:logos/faw class="w-full h-auto group-hover:opacity-75 transition-opacity" }}
+      </a>
+      <a href="https://wi.sia.ch/de" target="_blank" class="max-w-[310px] group" aria-label="Webseite SIA">
+        {{ partial:logos/sia class="w-full h-auto group-hover:opacity-75 transition-opacity" }}
+      </a>
+      <a href="https://www.bsa-fas.ch/de/ortsgruppen/bsa-zagg/" target="_blank" class="max-w-[308px] group" aria-label="Webseite BSA FAS">
+        {{ partial:logos/bsa-fas class="w-full h-auto group-hover:opacity-75 transition-opacity" }}
+      </a>
+      <a href="https://www.bsla.ch/de/" target="_blank" class="max-w-[184px] group" aria-label="Webseite BSLA">
+        {{ partial:logos/bsla class="w-full h-auto group-hover:opacity-75 transition-opacity" }}
+      </a>
+      <a href="https://stadt.winterthur.ch/gemeinde/verwaltung/bau/amt-fuer-staedtebau" target="_blank" class="max-w-[194px] group" aria-label="Webseite Stadt Winterthur">
+        {{ partial:logos/stadt-winterthur class="w-full h-auto group-hover:opacity-75 transition-opacity" }}
+      </a>
+      <a href="https://www.zhaw.ch/de/archbau" target="_blank" class="max-w-[60px] md:max-w-[45px] lg:max-w-[60px] group" aria-label="Webseite ZHAW">
+        {{ partial:logos/zhaw class="w-full h-auto group-hover:opacity-75 transition-opacity" }}
+      </a>
+    </div>
+  {{ /partial:layout/inner }}
+</footer> #}}
+{{ vite src="resources/js/app.js" }}
+{{ livewire:scripts }}

@@ -1,0 +1,8 @@
+<a 
+  href="javascript:;" 
+  x-on:click="menu = ! menu" 
+  title="Menü anzeigen"
+  :class="{ 'is-active': menu === true }"
+  class="absolute right-18 top-18 w-45 h-18">
+  {{ partial:icons/burger class="w-full h-auto" }}
+</a>

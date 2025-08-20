@@ -1,0 +1,24 @@
+title: Sektion
+fields:
+  -
+    handle: anchor
+    field:
+      type: text
+      display: Anchor
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: content
+    field:
+      type: replicator
+      display: Inhalt
+      sets:
+        neue_setgruppe:
+          display: 'Neue Setgruppe'
+          sets:
+            neues_set:
+              display: 'Neues Set'
+              fields: {  }

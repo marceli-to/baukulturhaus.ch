@@ -1,0 +1,28 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-f05140b7.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/css/fonts/ChromaST_Medium.woff": {
+    "file": "assets/ChromaST_Medium-adc4b83b.woff",
+    "src": "resources/css/fonts/ChromaST_Medium.woff"
+  },
+  "resources/css/fonts/ChromaST_Medium.woff2": {
+    "file": "assets/ChromaST_Medium-8df64158.woff2",
+    "src": "resources/css/fonts/ChromaST_Medium.woff2"
+  },
+  "resources/css/fonts/ChromaST_Regular.woff": {
+    "file": "assets/ChromaST_Regular-ba556329.woff",
+    "src": "resources/css/fonts/ChromaST_Regular.woff"
+  },
+  "resources/css/fonts/ChromaST_Regular.woff2": {
+    "file": "assets/ChromaST_Regular-74da2367.woff2",
+    "src": "resources/css/fonts/ChromaST_Regular.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-bea2fd0b.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
