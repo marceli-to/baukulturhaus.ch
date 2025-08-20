@@ -27,4 +27,7 @@ section[data-section] + h1,
 section[data-section] + h2 {
   @apply mt-35 md:mt-85;
 }
-  
+
+.container-narrow {
+  @apply w-full max-w-content mx-auto px-18;
+}
