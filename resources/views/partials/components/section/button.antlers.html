@@ -1,0 +1,14 @@
+<button
+  @click="open = !open"
+  class="w-full flex justify-center">
+  <span class="relative inline-block">
+    <h1 class="text-md leading-none">
+      {{ title }}
+    </h1>
+    <span 
+      class="absolute left-full ml-16 top-1/2 -translate-y-1/2"
+      :class="{ 'rotate-180': !open }">
+      {{ partial:icons/arrow-up }}
+    </span>
+  </span>
+</button>

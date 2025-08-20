@@ -1,6 +1,8 @@
 title: Editor
 fields:
   -
+    import: color_selector
+  -
     handle: editor
     field:
       buttons:
@@ -11,9 +13,10 @@ fields:
         - unorderedlist
         - removeformat
         - anchor
+        - lead
       toolbar_mode: floating
       remove_empty_nodes: true
       type: bard
-      display: Text
+      display: Inhalt
       container: assets
       localizable: true

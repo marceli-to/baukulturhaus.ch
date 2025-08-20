@@ -10,13 +10,21 @@ main {
   @apply flex-1;
 }
 
-main a,
-footer a {
-}
-
 p:not(:last-child) {
+  @apply mb-18;
 }
 
 strong {
-
+  @apply font-chroma-medium font-normal;
 }
+
+/* space between sections */
+section[data-section] + section[data-section] {
+  @apply mt-35 md:mt-85;
+}
+
+section[data-section] + h1,
+section[data-section] + h2 {
+  @apply mt-35 md:mt-85;
+}
+  

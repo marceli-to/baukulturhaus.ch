@@ -1,0 +1,32 @@
+title: Überschrift
+fields:
+  -
+    handle: anchor
+    field:
+      type: text
+      display: Anker
+  -
+    handle: heading_type
+    field:
+      options:
+        -
+          key: h1
+          value: H1
+        -
+          key: h2
+          value: H2
+        -
+          key: h3
+          value: H3
+      type: select
+      display: Typ
+      instructions: 'Überschriftstyp, hierarchisch strukturiert. Achtung: H1 darf nur einmal pro Seite verwendet werden.'
+      instructions_position: below
+      default: h1
+  -
+    import: color_selector
+  -
+    handle: title
+    field:
+      type: textarea
+      display: Titel

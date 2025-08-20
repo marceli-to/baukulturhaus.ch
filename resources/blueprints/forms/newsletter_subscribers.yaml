@@ -1,0 +1,36 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: firstname
+            field:
+              type: text
+              display: Vorname
+              validate:
+                - required
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              type: text
+              display: E-Mail
+              validate:
+                - required
+                - email
+          -
+            handle: privacy
+            field:
+              type: checkboxes
+              display: Datenschutzrichtlinien
+              always_save: false
+              validate:
+                - accepted

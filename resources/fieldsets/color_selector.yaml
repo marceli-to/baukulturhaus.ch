@@ -1,0 +1,27 @@
+title: Farbselektor
+fields:
+  -
+    handle: text_color
+    field:
+      options:
+        -
+          key: text-black
+          value: Schwarz
+        -
+          key: text-redion
+          value: Rot
+        -
+          key: text-crimora
+          value: Dunkelrot
+        -
+          key: text-vionex
+          value: Violett
+        -
+          key: text-verdara
+          value: Grün
+        -
+          key: text-solure
+          value: Gelb
+      default: text-black
+      type: select
+      display: Textfarbe

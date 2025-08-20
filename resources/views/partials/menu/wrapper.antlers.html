@@ -4,7 +4,7 @@
   x-show="menu"
   x-init="window.addEventListener('scroll', () => {  if (menu) {  menu = false; } });">
 
-  {{ partial:layout/inner class="relative" }}
+  {{ partial:layout/inner class="relative max-w-page" }}
     <a 
       href="javascript:;" 
       x-on:click="menu = ! menu" 
@@ -26,7 +26,6 @@
         <a 
           href="/kontakt"
           aria-label="Kontakt"
-          @click="menu = false"
           class="block w-full text-center text-sm text-black hover:text-redion transition-colors duration-200">
           Kontakt
         </a>
@@ -35,7 +34,6 @@
         <a 
           href="/kontakt#impressum"
           aria-label="Impressum"
-          @click="menu = false"
           class="block w-full text-center text-sm text-black hover:text-redion transition-colors duration-200">
           Impressum
         </a>

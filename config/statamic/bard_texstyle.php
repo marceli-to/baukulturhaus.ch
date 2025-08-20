@@ -33,6 +33,17 @@ return [
           'cp_badge' => false,
         ],
 
+        'lead' => [
+          'type' => 'paragraph',
+          'name' => 'Lead',
+          'ident' => 'L',
+          'icon' => null,
+          'class' => 'text-sm md:text-md text-center',
+          'cp_css' => 'font-size: 1.3rem; line-height: 1.8rem',
+          'cp_badge' => false,
+        ],
+
+
         // 'brand' => [
         //     'type' => 'span',
         //     'name' => 'Brand Text',

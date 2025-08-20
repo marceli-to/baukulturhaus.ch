@@ -3,6 +3,9 @@
 {{ /if }}
 
 {{ if type == 'page_section' }}
-  {{ partial:components/section }}
+  {{ partial:components/section/wrapper }}
 {{ /if }}
 
+{{ if type == 'heading' }}
+  {{ partial:components/heading }}
+{{ /if }}

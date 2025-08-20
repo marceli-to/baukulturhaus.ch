@@ -1,0 +1,72 @@
+{{ form:newsletter_subscribers }}
+
+  {{ if errors }}
+    <div class="text-red-600 mb-20">
+      <ul>
+        {{ errors }}
+          <li>{{ value }}</li>
+        {{ /errors }}
+      </ul>
+    </div>
+  {{ /if }}
+
+  {{ if success }}
+    <div class="text-verdara mb-20">
+      <p>{{ success }}</p>
+    </div>
+  {{ /if }}
+
+  <div class="flex flex-col gap-y-20">
+    <div class="flex flex-col gap-y-20 md:grid md:grid-cols-2 md:gap-20">
+      <div>
+        <input 
+          type="text" 
+          name="firstname" 
+          id="firstname" 
+          required
+          class="w-full px-5 py-8 border-2 border-black focus:outline-none focus:border-vionex !ring-0 placeholder:text-black"
+          value="{{ old:firstname }}"
+          placeholder="Vorname *">
+      </div>
+      <div>
+        <input 
+          type="text" 
+          name="name" 
+          id="name" 
+          required
+          class="w-full px-5 py-8 border-2 border-black focus:outline-none focus:border-vionex !ring-0 placeholder:text-black"
+          value="{{ old:name }}"
+          placeholder="Name *">
+      </div>
+    </div>
+    <div>
+      <input 
+        type="email" 
+        name="email" 
+        id="email" 
+        required
+        class="w-full px-5 py-8 border-2 border-black focus:outline-none focus:border-vionex !ring-0 placeholder:text-black"
+        value="{{ old:email }}"
+        placeholder="E-Mail-Adresse *">
+    </div>
+    <div class="flex gap-x-15 my-15">
+      <input 
+        type="checkbox" 
+        name="privacy" 
+        id="privacy" 
+        class="appearance-none w-20 h-20 border-2 shrink-0 border-black checked:bg-black checked:border-black focus:outline-none !ring-0">
+        <label for="privacy" class="cursor-pointer select-none inline-block -mt-1">
+          Ich habe die <a href="#datenschutz" class="underline underline-offset-2 hover:no-underline">Datenschutzrichtlinien</a> gelesen und akzeptiert.
+        </label>
+    </div>
+    
+    <div>
+      <button 
+        type="submit"
+        class="w-auto bg-white px-5 py-8 pr-40 md:pr-80 border-2 border-black focus:outline-none hover:border-vionex active:border-vionex !ring-0 transition-colors">
+        Anmelden
+      </button>
+    </div>
+  </div>
+
+{{ /form:newsletter_subscribers }}

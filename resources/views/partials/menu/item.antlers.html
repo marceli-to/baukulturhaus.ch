@@ -2,13 +2,15 @@
   <a 
     {{ if url | starts_with('#') }}
       href="/{{ url }}"
+      {{ if is_homepage }}
+        @click="menu = false"
+      {{ /if }}
     {{ else }}
       href="{{ url }}"
     {{ /if }}
     class="block w-full text-center text-md md:text-lg text-black hover:text-redion transition-colors duration-200 {{ is_current ? 'text-redion' : '' }}"
     target="{{ is_external ? '_blank' : '_self' }}"
-    aria-label="{{ title }}"
-    @click="menu = false">
+    aria-label="{{ title }}">
     {{ title }}
   </a>
 </li>

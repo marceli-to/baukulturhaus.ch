@@ -1,0 +1,20 @@
+<div 
+  x-show="open" 
+  class="mt-18">
+  {{ content }}
+
+    {{ if type == 'editor' }}
+      <div class="{{ text_color }}">
+        {{ partial:components/editor }}
+      </div>
+    {{ /if }}
+
+    {{ if type == 'newsletter_subsriber_form' }}
+    <div class="w-full max-w-content mx-auto px-18">
+      {{ partial:components/forms/subscribers }}
+    </div>
+    {{ /if }}
+
+  {{ /content }}
+</div>
+

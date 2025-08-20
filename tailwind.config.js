@@ -11,6 +11,19 @@ export default {
     './content/**/*.md'
   ],
 
+  safelist: [
+    'text-redion',
+    'text-crimora',
+    'text-vionex',
+    'text-verdara',
+    'text-solure',
+    'text-white',
+    'text-black',
+    'text-left',
+    'text-center',
+    'text-right',
+  ],
+
   theme: {
     extend: {
 
@@ -19,7 +32,8 @@ export default {
       },
 
       maxWidth: {
-        'content': '90rem',
+        'page': '90rem',
+        'content': '56.25rem',
       },
 
       fontFamily: {

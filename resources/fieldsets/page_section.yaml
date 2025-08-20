@@ -1,10 +1,16 @@
-title: Sektion
+title: Inhaltsbereich
 fields:
+  -
+    handle: is_open
+    field:
+      default: true
+      type: toggle
+      display: 'Aufgeklappt?'
   -
     handle: anchor
     field:
       type: text
-      display: Anchor
+      display: Anker
   -
     handle: title
     field:
@@ -16,9 +22,23 @@ fields:
       type: replicator
       display: Inhalt
       sets:
-        neue_setgruppe:
-          display: 'Neue Setgruppe'
+        standard_elements:
+          display: Standardelemente
+          icon: addon-boxes-stack
           sets:
-            neues_set:
-              display: 'Neues Set'
+            editor:
+              display: Texteditor
+              instructions: 'Texteditor hinzufügen'
+              icon: text-formatting-markdown
+              fields:
+                -
+                  import: editor
+        special_elements:
+          display: Spezialelemente
+          icon: addon-boxes-stack
+          sets:
+            newsletter_subsriber_form:
+              display: 'Newsletter Formular'
+              instructions: 'Newsletter Formular hinzufügen'
+              icon: form-address-field
               fields: {  }
