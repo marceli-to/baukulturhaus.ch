@@ -1,5 +1,12 @@
 {{ if type == 'editor' }}
-  {{ partial:components/editor }}
+  <section 
+    class="w-full container-narrow scroll-mt-85 md:scroll-mt-135" 
+    {{ if anchor }}
+      id="{{ anchor }}"
+    {{ /if }}
+    data-section>
+    {{ partial:components/editor }}
+  </section>
 {{ /if }}
 
 {{ if type == 'accordion' }}

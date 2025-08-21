@@ -1,0 +1,38 @@
+<div class="relative">
+
+  <div
+    class="swiper" 
+    data-gallery>
+    
+    <div class="swiper-wrapper">
+
+      {{ images }}
+        <div class="swiper-slide">
+
+          {{ partial:components/media/image 
+            image="{{ image }}"
+            :sizes="['2xl', 'xl', 'lg']"
+            alt="{{ caption }}"
+            class="w-full h-full object-cover" }}
+
+          {{ if caption }}
+            <div class="slideshow-caption mt-5">
+              {{ caption }}
+            </div>
+          {{ /if }}
+
+        </div>
+
+      {{ /images }}
+    </div>
+  </div>
+
+  <button class="swiper-btn-next w-20 h-45 xl:w-22 xl:h-50 absolute right-8 xl:-right-38 top-1/2 -translate-y-1/2 z-50">
+    {{ partial:icons/arrow-right class="w-full h-auto text-white xl:text-black" }}
+  </button>
+  
+  <button class="swiper-btn-prev w-20 h-45 xl:w-22 xl:h-50 absolute left-8 xl:-left-38 top-1/2 -translate-y-1/2 z-50">
+    {{ partial:icons/arrow-left class="w-full h-auto text-white xl:text-black" }}
+  </button>
+
+</div>

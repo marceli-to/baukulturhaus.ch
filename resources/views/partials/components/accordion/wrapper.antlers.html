@@ -1,6 +1,8 @@
 <section 
-  class="w-full scroll-mt-85 md:scroll-mt-135" 
-  id="{{ anchor }}"
+  class="w-full scroll-mt-85 md:scroll-mt-135"
+  {{ if anchor }} 
+    id="{{ anchor }}"
+  {{ /if }}
   data-section
   x-data="{ open: {{ is_open == '1' ? 'true' : 'false' }} }">
   {{ partial:components/accordion/button }}

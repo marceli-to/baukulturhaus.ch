@@ -33,6 +33,13 @@ fields:
               fields:
                 -
                   import: editor
+            slideshow:
+              display: Bildergalerie
+              instructions: 'Bildergalerie hinzufügen'
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  import: slideshow
         special_elements:
           display: Spezialelemente
           icon: addon-boxes-stack

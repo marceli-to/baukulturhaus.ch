@@ -1,81 +1,93 @@
-<footer class="py-20 md:py-40 mt-60 md:mt-0">
+<footer class="pb-50 pt-180 text-xs lg:text-sm">
   {{ partial:layout/inner class="max-w-page" }}
-  <div class="md:grid md:grid-cols-2">
-    <div class="md:col-span-1 md:order-2">
-      <h3 class="font-chroma-medium">
+  <div class="lg:grid lg:grid-cols-2">
+    <div class="lg:col-span-1 lg:order-2 mb-65">
+      <h3 class="font-chroma-medium mb-20">
         Trägerorganisationen
       </h3>
+      <div>
+        [Logos]
+      </div>
     </div>
-    <div class="md:col-span-1 md:order-1">
-      <h3 class="font-chroma-medium">
+    <div class="lg:col-span-1 lg:order-1">
+      <h3 class="font-chroma-medium mb-20">
         Kontakt
       </h3>
       <div class="grid grid-cols-2">
-        <div class="col-span-2 md:col-span-1 md:order-1">
+        <div class="col-span-2 lg:col-span-1 lg:order-1 mb-20 [&_a:hover]:underline [&_a]:underline-offset-4">
           {{ contact_information:address }}
         </div>
-        <div class="col-span-1 md:col-span-2 md:order-3">
+        <div class="col-span-1 lg:col-span-2 lg:order-3">
           <nav>
             <ul>
               <li>
                 <a 
                   href="/kontakt#newsletter"
-                  aria-label="Newsletter">
+                  aria-label="Newsletter"
+                  class="hover:underline underline-offset-4">
                   Newsletter
                 </a>
               </li>
               <li>
                 <a 
                   href="/kontakt#impressum"
-                  aria-label="Impressum">
+                  aria-label="Impressum"
+                  class="hover:underline underline-offset-4">
                   Impressum
                 </a>
               </li>
               <li>
                 <a 
                   href="/kontakt#datenschutz"
-                  aria-label="Datenschutz">
+                  aria-label="Datenschutz"
+                  class="hover:underline underline-offset-4">
                   Datenschutz
                 </a>
               </li>
             </ul>
           </nav>
         </div>
-        <div class="col-span-1 md:order-2">
+        <div class="col-span-1 lg:order-2">
           <nav>
             <ul>
               {{ if social_media_channels:instagram }}
-              <li>
-                <a 
-                  href="{{ social_media_channels:instagram }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram">
-                  Instagram
-                </a>
-              </li>
+                <li>
+                  <a 
+                    href="{{ social_media_channels:instagram }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    class="flex items-center gap-x-5 group">
+                    {{ partial:icons/instagram class="w-16 lg:w-20 h-auto group-hover:rotate-45 transition-transform duration-300" }}
+                    <span class="group-hover:underline underline-offset-4">Instagram</span>
+                  </a>
+                </li>
               {{ /if }}
               {{ if social_media_channels:facebook }}
-              <li>
-                <a 
-                  href="{{ social_media_channels:facebook }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook">
-                  Facebook
-                </a>
-              </li>
+                <li>
+                  <a 
+                    href="{{ social_media_channels:facebook }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    class="flex items-center gap-x-5 group">
+                    {{ partial:icons/facebook class="w-16 lg:w-20 h-auto group-hover:rotate-45 transition-transform duration-300" }}
+                    <span class="group-hover:underline underline-offset-4">Facebook</span>
+                  </a>
+                </li>
               {{ /if }}
               {{ if social_media_channels:linkedin }}
-              <li>
-                <a 
-                  href="{{ social_media_channels:linkedin }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Linkedin">
-                  Linkedin
-                </a>
-              </li>
+                <li>
+                  <a 
+                    href="{{ social_media_channels:linkedin }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Linkedin"
+                    class="flex items-center gap-x-5 group">
+                    {{ partial:icons/linkedin class="w-16 lg:w-20 h-auto group-hover:rotate-45 transition-transform duration-300" }}
+                    <span class="group-hover:underline underline-offset-4">Linkedin</span>
+                  </a>
+                </li>
               {{ /if }}
             </ul>
           </nav>

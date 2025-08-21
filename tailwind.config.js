@@ -33,7 +33,8 @@ export default {
 
       maxWidth: {
         'page': '90rem',
-        'content': '56.25rem',
+        'narrow': '56.25rem',
+        'wide': '64.625rem',
       },
 
       fontFamily: {

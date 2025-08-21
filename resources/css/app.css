@@ -29,5 +29,13 @@ section[data-section] + h2 {
 }
 
 .container-narrow {
-  @apply w-full max-w-content mx-auto px-18;
+  @apply w-full max-w-narrow mx-auto px-18;
+}
+
+.container-wide {
+  @apply w-full max-w-wide mx-auto px-18;
+}
+
+.container-narrow + .container-wide {
+  @apply mb-35 md:mb-85;
 }
