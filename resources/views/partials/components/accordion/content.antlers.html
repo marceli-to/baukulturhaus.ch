@@ -1,0 +1,36 @@
+<div 
+  x-show="open" 
+  class="mt-18">
+  {{ content }}
+
+    {{ if type == 'editor' }}
+      <div class="{{ text_color }}">
+        {{ partial:components/editor }}
+      </div>
+    {{ /if }}
+
+    {{ if type == 'newsletter_subsriber_form' }}
+      <div class="container-narrow">
+        {{ partial:components/forms/subscribers }}
+      </div>
+    {{ /if }}
+
+    {{ if type == 'contact_information' }}
+      <div class="container-narrow [&_a:hover]:underline">
+        {{ contact_information:address }}
+        {{ if show_google_maps_url }}
+          <a 
+            href="{{ contact_information:google_maps_url }}" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Google Maps"
+            class="hover:underline underline-offset-4">
+            Google Maps
+          </a>
+        {{ /if }}
+      </div>
+    {{ /if }}
+
+  {{ /content }}
+</div>
+

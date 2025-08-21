@@ -1,4 +1,4 @@
-title: Inhaltsbereich
+title: Akkordeon
 fields:
   -
     handle: is_open
@@ -40,5 +40,15 @@ fields:
             newsletter_subsriber_form:
               display: 'Newsletter Formular'
               instructions: 'Newsletter Formular hinzufügen'
-              icon: form-address-field
+              icon: form-text-field
               fields: {  }
+            contact_information:
+              display: Kontaktinformation
+              icon: form-address-field
+              fields:
+                -
+                  handle: show_google_maps_url
+                  field:
+                    default: true
+                    type: toggle
+                    display: 'Google Maps anzeigen?'

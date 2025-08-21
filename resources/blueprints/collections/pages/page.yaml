@@ -41,13 +41,13 @@ tabs:
                       fields:
                         -
                           import: editor
-                    page_section:
-                      display: Inhaltsbereich
-                      instructions: 'Inhaltsbereich (aufklappbar) hinzufügen'
+                    accordion:
+                      display: Akkordeon
+                      instructions: 'Akkordeon hinzufügen'
                       icon: layout-table-row-insert
                       fields:
                         -
-                          import: page_section
+                          import: accordion
                 special_elements:
                   display: Spezialelemente
                   icon: addon-boxes-stack

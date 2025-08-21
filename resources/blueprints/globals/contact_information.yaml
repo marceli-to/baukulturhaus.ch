@@ -1,0 +1,26 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: address
+            field:
+              buttons:
+                - removeformat
+                - anchor
+              toolbar_mode: floating
+              remove_empty_nodes: false
+              link_collections:
+                - pages
+              container: assets
+              type: bard
+              display: Adresse
+              instructions: 'Adresse, Telefon, E-Mail'
+              instructions_position: below
+          -
+            handle: google_maps_url
+            field:
+              type: text
+              display: 'Google Maps'
