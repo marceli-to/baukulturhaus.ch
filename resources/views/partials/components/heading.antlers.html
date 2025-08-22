@@ -1,3 +1,7 @@
-<{{ heading_type }} class="{{ text_color }} text-md lg:text-lg text-center text-pretty mb-20 container-narrow {{ class }}">
+<{{ heading_type }} 
+  class="{{ text_color }} text-md lg:text-lg text-center text-pretty mb-20 container-narrow {{ if anchor }}scroll-mt-85 md:scroll-mt-135{{ /if }} {{ class }}"
+  {{ if anchor }}
+    id="{{ anchor }}"
+  {{ /if }}>
 {{ title }}
 </{{ heading_type }}>

@@ -17,7 +17,7 @@
 
     {{ if type == 'contact_information' }}
       <div class="container-narrow">
-        <div class="[&_a:hover]:underline">
+        <div class="[&_a:hover]:decoration-1 [&_a:hover]:underline">
           {{ contact_information:address }}
           {{ if show_google_maps_url }}
             <a 
@@ -25,7 +25,7 @@
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Google Maps"
-              class="hover:underline underline-offset-4">
+              class="hover:underline underline-offset-4 decoration-1">
               Google Maps
             </a>
           {{ /if }}

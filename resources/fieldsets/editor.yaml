@@ -8,6 +8,7 @@ fields:
       buttons:
         - h2
         - h3
+        - h4
         - bold
         - italic
         - unorderedlist
@@ -20,3 +21,45 @@ fields:
       display: Inhalt
       container: assets
       localizable: true
+      sets:
+        content_elements:
+          display: Inhaltselemente
+          instructions: 'Inhaltselemente hinzufügen'
+          icon: addon-boxes-stack
+          sets:
+            link_download:
+              display: Downloadlink
+              instructions: 'Downloadlink hinzufügen'
+              icon: link
+              fields:
+                -
+                  handle: link
+                  field:
+                    collections:
+                      - pages
+                    container: assets
+                    type: link
+                    display: Link
+                -
+                  handle: link_text
+                  field:
+                    type: text
+                    display: Linktext
+            link_cta:
+              display: '"Call to action"-Link'
+              instructions: '"Call to action"-Link hinzfügen'
+              icon: link
+              fields:
+                -
+                  handle: link
+                  field:
+                    collections:
+                      - pages
+                    container: assets
+                    type: link
+                    display: Link
+                -
+                  handle: link_text
+                  field:
+                    type: text
+                    display: Linktext

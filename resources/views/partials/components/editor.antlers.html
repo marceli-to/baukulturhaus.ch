@@ -1,3 +1,38 @@
 <article class="hyphens-auto text-pretty {{ text_color }}">
+
   {{ editor }}
+
+    {{ if type == 'text' }}
+      {{ text }}
+    {{ /if }}
+
+    {{ if type == 'link_download' }}
+      <div>
+        <a 
+          href="{{ link }}"
+          target="_blank"
+          aria-label="{{ link_text }}"
+          class="group flex items-start gap-x-7">
+          {{ partial:icons/arrow-download class="mt-6 group-hover:rotate-45 transition-transform duration-300" }}
+          <span class="decoration-1 underline underline-offset-4 group-hover:no-underline">
+            {{ link_text }}
+          </span>
+        </a>
+      </div>
+    {{ /if }}
+
+    {{ if type == 'link_cta' }}
+      <div class="flex justify-center mt-35">
+        <a 
+          href="{{ link }}"
+          aria-label="{{ link_text }}"
+          class="group text-md lg:text-lg text-center">
+          {{ partial:icons/arrow-link class="inline-block mr-4 -mt-2 w-22 lg:w-30 h-auto group-hover:translate-x-6 transition-transform duration-300" }}
+          <span class="">
+            {{ link_text }}
+          </span>
+        </a>
+      </div>
+    {{ /if }}
+  {{ /editor}}
 </article>

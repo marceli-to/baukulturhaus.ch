@@ -1,6 +1,6 @@
 {{ if type == 'editor' }}
   <section 
-    class="w-full container-narrow scroll-mt-85 md:scroll-mt-135" 
+    class="w-full container-narrow {{ if anchor }} scroll-mt-85 md:scroll-mt-135 {{ /if }}" 
     {{ if anchor }}
       id="{{ anchor }}"
     {{ /if }}
@@ -19,4 +19,10 @@
 
 {{ if type == 'supporter' }}
   {{ partial:components/supporter }}
+{{ /if }}
+
+{{ if type == 'list_items' }}
+<div class="container-narrow">
+  {{ partial:components/list_items }}
+</div>
 {{ /if }}

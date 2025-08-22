@@ -48,7 +48,7 @@ section[data-section] + h2 {
   @apply w-full max-w-page mx-auto px-18;
 }
 
-.container-narrow + .container-wide {
+.container-narrow + .container-wide:not(:last-child) {
   @apply mb-35 md:mb-85;
 }
 
