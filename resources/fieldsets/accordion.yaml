@@ -21,6 +21,9 @@ fields:
     field:
       options:
         -
+          key: h1
+          value: H1
+        -
           key: h2
           value: H2
         -
@@ -29,7 +32,7 @@ fields:
       default: h2
       type: select
       display: Typ
-      instructions: 'Überschriftstyp, hierarchisch strukturiert.'
+      instructions: 'Überschriftstyp, hierarchisch strukturiert. Achtung: H1 darf nur einmal pro Seite verwendet werden.'
       instructions_position: below
   -
     handle: content
