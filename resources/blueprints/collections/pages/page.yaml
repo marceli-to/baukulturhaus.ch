@@ -48,6 +48,20 @@ tabs:
                       fields:
                         -
                           import: accordion
+                    supporter:
+                      display: Unterstützer
+                      instructions: 'Unterstützer hinzufügen'
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          import: supporter
+                    list_items:
+                      display: Aufzählung
+                      instructions: 'Aufzählung hinzufügen'
+                      icon: text-formatting-initial-letter
+                      fields:
+                        -
+                          import: listing
                 special_elements:
                   display: Spezialelemente
                   icon: addon-boxes-stack

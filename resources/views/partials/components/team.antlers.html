@@ -1,0 +1,53 @@
+<div 
+  class="relative" 
+  data-team-slider-container>
+  
+  <div 
+    class="swiper relative" 
+    data-team-slider>
+
+    <div class="swiper-wrapper">
+
+      {{ team }}
+        
+        <div class="swiper-slide">
+          {{ if image }}
+            <div class="w-full mb-10" data-image-box>
+              {{ partial:components/media/image 
+                image="{{ image }}"
+                preset="focal-4-3"
+                :sizes="['xl', 'lg']"
+                alt="{{ name }}"
+                class="w-full h-full object-cover aspect-[4/3]" }}
+            </div>
+          {{ /if }}
+
+          <div>
+            {{ if name }}
+              <div>
+                {{ name }}
+              </div>
+            {{ /if }}
+            {{ if position }}
+              <div>
+                {{ position }}
+              </div>
+            {{ /if }}
+          </div>
+        </div>
+
+      {{ /team }}
+
+    </div>
+
+    <button class="swiper-btn-team-next absolute right-12 xl:right-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2">
+      {{ partial:icons/arrow-right class="w-full h-auto text-white xl:text-black" }}
+    </button>
+    
+    <button class="swiper-btn-team-prev absolute left-12 xl:left-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2">
+      {{ partial:icons/arrow-left class="w-full h-auto text-white xl:text-black" }}
+    </button>
+
+  </div>
+
+</div>

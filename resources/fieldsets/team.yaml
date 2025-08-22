@@ -1,0 +1,35 @@
+title: Team
+fields:
+  -
+    handle: team
+    field:
+      type: replicator
+      display: Team
+      collapse: true
+      sets:
+        supporter:
+          display: Team
+          instructions: 'Team hinzufügen'
+          icon: text-formatting-image-top
+          sets:
+            team:
+              display: Team
+              icon: text-formatting-image-top
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Portrait
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: Name
+                -
+                  handle: position
+                  field:
+                    type: text
+                    display: Funktion

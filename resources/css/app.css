@@ -23,6 +23,14 @@ section[data-section] + section[data-section] {
   @apply mt-35 md:mt-85;
 }
 
+section[data-section] + section[data-section-accordion] {
+  @apply mt-20 md:mt-35;
+}
+
+.page-contact section[data-section-accordion] + section[data-section-accordion] {
+  @apply mt-35 md:mt-85;
+}
+
 section[data-section] + h1,
 section[data-section] + h2 {
   @apply mt-35 md:mt-85;
@@ -36,6 +44,33 @@ section[data-section] + h2 {
   @apply w-full max-w-wide mx-auto px-18;
 }
 
+.container-page {
+  @apply w-full max-w-page mx-auto px-18;
+}
+
 .container-narrow + .container-wide {
   @apply mb-35 md:mb-85;
 }
+
+/* Wrapper becomes a container for cqw */
+[data-supporter-slider-container],
+[data-team-slider-container] {
+  position: relative;
+  container-type: inline-size;       /* enables cqw */
+  --gap: 16px;                       /* Swiper spaceBetween */
+  --spv: 1;                          /* default slidesPerView */
+  --total-gaps: calc((var(--spv) - 1) * var(--gap));
+  --slide-w: calc((100cqw - var(--total-gaps)) / var(--spv));
+  --img-h: calc(var(--slide-w) * 0.75); /* 4:3 => height = 0.75 * width */
+}
+
+/* Match your Swiper breakpoints */
+@media (min-width: 768px){
+  [data-supporter-slider-container]{ --spv: 2; }
+  [data-team-slider-container]{ --spv: 2; }
+}
+@media (min-width: 1024px){
+  [data-supporter-slider-container]{ --spv: 3; }
+  [data-team-slider-container]{ --spv: 3; }
+}
+

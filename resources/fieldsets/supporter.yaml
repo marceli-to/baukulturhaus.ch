@@ -1,0 +1,42 @@
+title: Unterstützer
+fields:
+  -
+    import: heading
+  -
+    handle: supporter
+    field:
+      type: replicator
+      display: Unterstützer
+      collapse: true
+      sets:
+        supporter:
+          display: Unterstützer
+          instructions: 'Unterstützer hinzufügen'
+          icon: text-formatting-image-top
+          sets:
+            supporter:
+              display: Unterstützer
+              icon: text-formatting-image-top
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Portrait
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: Name
+                -
+                  handle: position
+                  field:
+                    type: text
+                    display: Funktion
+                -
+                  handle: quote
+                  field:
+                    type: textarea
+                    display: Zitat

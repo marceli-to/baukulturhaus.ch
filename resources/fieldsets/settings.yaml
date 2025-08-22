@@ -4,8 +4,9 @@ fields:
     handle: page_class
     field:
       options:
-        page-privacy: Datenschutz
-        page-imprint: Impressum
+        -
+          key: page-contact
+          value: Kontakt
       type: select
       display: 'Seiten CSS-Klasse'
   -

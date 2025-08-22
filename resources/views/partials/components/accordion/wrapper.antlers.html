@@ -4,6 +4,7 @@
     id="{{ anchor }}"
   {{ /if }}
   data-section
+  data-section-accordion
   x-data="{ open: {{ is_open == '1' ? 'true' : 'false' }} }">
   {{ partial:components/accordion/button }}
   {{ partial:components/accordion/content }}

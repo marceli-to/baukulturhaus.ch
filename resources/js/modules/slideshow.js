@@ -13,10 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     new Swiper(slideshowElement, {
       modules: [Navigation, Pagination, Autoplay],
       loop: true,
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false,
-      // },
       navigation: {
         nextEl: '.swiper-btn-next',
         prevEl: '.swiper-btn-prev',
@@ -25,5 +21,55 @@ document.addEventListener('DOMContentLoaded', function() {
       effect: 'slide',
     });
   });
+
+  // Supporter Sliders
+  const supporters = document.querySelectorAll('[data-supporter-slider]');
+  supporters.forEach(slideshowElement => {
+    new Swiper(slideshowElement, {
+      modules: [Navigation, Pagination, Autoplay],
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+      navigation: {
+        nextEl: '.swiper-btn-supporter-next',
+        prevEl: '.swiper-btn-supporter-prev',
+      },
+      speed: 600,
+      effect: 'slide',
+    });
+  });
+
+    // Team Sliders
+    const teams = document.querySelectorAll('[data-team-slider]');
+    teams.forEach(slideshowElement => {
+      new Swiper(slideshowElement, {
+        modules: [Navigation, Pagination, Autoplay],
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 16,
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+        navigation: {
+          nextEl: '.swiper-btn-team-next',
+          prevEl: '.swiper-btn-team-prev',
+        },
+        speed: 600,
+        effect: 'slide',
+      });
+    });
 
 });

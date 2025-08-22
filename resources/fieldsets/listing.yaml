@@ -1,0 +1,30 @@
+title: Aufzählung
+fields:
+  -
+    handle: list_item
+    field:
+      type: replicator
+      display: Aufzählung
+      collapse: true
+      sets:
+        neue_setgruppe:
+          display: 'Neue Setgruppe'
+          sets:
+            list_item:
+              display: Aufzählung
+              instructions: 'Aufzählung hinzufügen'
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Titel
+                    always_save: false
+                    validate:
+                      - required
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text

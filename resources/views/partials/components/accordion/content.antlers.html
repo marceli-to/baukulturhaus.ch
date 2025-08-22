@@ -39,6 +39,18 @@
       </div>
     {{ /if }}
 
+    {{ if type == 'team' }}
+      <div class="container-page mt-20">
+        {{ partial:components/team }}
+      </div>
+    {{ /if }}
+
+    {{ if type == 'list_items' }}
+      <div class="container-narrow">
+        {{ partial:components/list_items }}
+      </div>
+    {{ /if }}
+
   {{ /content }}
 </div>
 

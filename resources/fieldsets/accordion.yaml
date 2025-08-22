@@ -15,7 +15,22 @@ fields:
     handle: title
     field:
       type: text
-      display: Title
+      display: Überschrift
+  -
+    handle: title_type
+    field:
+      options:
+        -
+          key: h2
+          value: H2
+        -
+          key: h3
+          value: H3
+      default: h2
+      type: select
+      display: Typ
+      instructions: 'Überschriftstyp, hierarchisch strukturiert.'
+      instructions_position: below
   -
     handle: content
     field:
@@ -40,6 +55,20 @@ fields:
               fields:
                 -
                   import: slideshow
+            team:
+              display: Team
+              instructions: 'Team hinzufügen'
+              icon: text-formatting-image-top
+              fields:
+                -
+                  import: team
+            list_items:
+              display: Aufzählung
+              instructions: 'Aufzählung hinzufügen'
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  import: listing
         special_elements:
           display: Spezialelemente
           icon: addon-boxes-stack

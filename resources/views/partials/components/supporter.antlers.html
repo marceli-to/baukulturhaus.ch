@@ -1,0 +1,67 @@
+<section data-section>
+  
+  {{ partial:components/heading class="mb-14 lg:!mb-10" }}
+
+  {{ partial:layout/inner class="max-w-page" }}
+
+    <div 
+      class="relative" 
+      data-supporter-slider-container>
+      
+      <div 
+        class="swiper relative" 
+        data-supporter-slider>
+
+        <div class="swiper-wrapper">
+
+          {{ supporter }}
+            
+            <div class="swiper-slide">
+              {{ if image }}
+                <div class="w-full mb-10" data-image-box>
+                  {{ partial:components/media/image 
+                    image="{{ image }}"
+                    preset="focal-4-3"
+                    :sizes="['xl', 'lg']"
+                    alt="{{ name }}"
+                    class="w-full h-full object-cover aspect-[4/3]" }}
+                </div>
+              {{ /if }}
+
+              <div>
+                {{ if quote }}
+                  <blockquote class="text-md md:text-vionex leading-[1.16] {{ name || position ? 'mb-3' : '' }}">
+                    «{{ quote }}»
+                  </blockquote>
+                {{ /if }}
+                {{ if name }}
+                  <div>
+                    {{ name }}
+                  </div>
+                {{ /if }}
+                {{ if position }}
+                  <div>
+                    {{ position }}
+                  </div>
+                {{ /if }}
+              </div>
+            </div>
+
+          {{ /supporter }}
+
+        </div>
+
+        <button class="swiper-btn-supporter-next absolute right-12 xl:right-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2">
+          {{ partial:icons/arrow-right class="w-full h-auto text-white xl:text-black" }}
+        </button>
+        
+        <button class="swiper-btn-supporter-prev absolute left-12 xl:left-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2">
+          {{ partial:icons/arrow-left class="w-full h-auto text-white xl:text-black" }}
+        </button>
+
+      </div>
+
+    </div>
+
+  {{ /partial:layout/inner }}
+</section>
