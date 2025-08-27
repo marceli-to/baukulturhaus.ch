@@ -72,6 +72,13 @@ fields:
               fields:
                 -
                   import: listing
+            single_image:
+              display: Bild
+              instructions: 'Einzelbild hinzufügen'
+              icon: media-image-picture-orientation
+              fields:
+                -
+                  import: single_image
         special_elements:
           display: Spezialelemente
           icon: addon-boxes-stack

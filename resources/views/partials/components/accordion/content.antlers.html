@@ -54,6 +54,16 @@
       </div>
     {{ /if }}
 
+    {{ if type == 'single_image' }}
+      <div class="container-narrow">
+        {{ partial:components/media/image 
+          :image="image"
+          :sizes="['2xl', 'xl', 'lg']"
+          alt="{{ name }}"
+          class="w-full h-auto" }}
+      </div>
+    {{ /if }}
+
   {{ /content }}
 </div>
 

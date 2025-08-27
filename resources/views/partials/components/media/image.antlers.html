@@ -16,7 +16,7 @@
     <img 
       src="{{ glide:image preset="{{ preset ? 'md-{{ preset }}' : 'md' }}" }}" 
       alt="{{ alt ? alt : image:alt }}" 
-      title="{{ alt ? alt : image:alt }}" 
+      aria-label="{{ alt ? alt : image:alt }}"
       height="{{ image:height }}" 
       width="{{ image:width }}"
       class="block {{ class ?? '' }}"
