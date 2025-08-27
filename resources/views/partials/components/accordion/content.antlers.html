@@ -17,7 +17,7 @@
 
     {{ if type == 'contact_information' }}
       <div class="container-narrow">
-        <div class="[&_a:hover]:decoration-1 [&_a:hover]:underline">
+        <div class="[&_a:hover]:decoration-1 [&_a:hover]:underline [&_a]:underline-offset-4">
           {{ contact_information:address }}
           {{ if show_google_maps_url }}
             <a 
@@ -25,8 +25,11 @@
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Google Maps"
-              class="hover:underline underline-offset-4 decoration-1">
-              Google Maps
+              class="group inline-flex items-center gap-x-8 !no-underline">
+              {{ partial:icons/arrow-link class="w-14 lg:w-16 h-auto group-hover:translate-x-3 transition-transform duration-300" }}
+              <span class="!no-underline">
+                Google Maps
+              </span>
             </a>
           {{ /if }}
         </div>

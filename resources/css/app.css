@@ -33,11 +33,15 @@ section[data-section] + section[data-section-accordion] {
 
 section[data-section] + h1,
 section[data-section] + h2 {
-  @apply mt-35 md:mt-85;
+  @apply !mt-50 md:!mt-85;
 }
 
 .container-narrow {
   @apply w-full max-w-narrow mx-auto px-18;
+}
+
+.container-narrow + .container-narrow {
+  @apply mt-20 md:mt-30;
 }
 
 .container-wide {

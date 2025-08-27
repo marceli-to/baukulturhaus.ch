@@ -1,4 +1,4 @@
-<article class="hyphens-auto text-pretty {{ text_color }}">
+<article class="text-pretty {{ text_color }}">
 
   {{ editor }}
 
@@ -17,6 +17,19 @@
           <span class="decoration-1 underline underline-offset-4 group-hover:no-underline">
             {{ link_text }}
           </span>
+        </a>
+      </div>
+    {{ /if }}
+
+    {{ if type == 'link_external' }}
+      <div>
+        <a 
+          href="{{ link }}" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="group inline-flex items-center gap-x-8">
+          {{ partial:icons/arrow-link class="w-14 lg:w-16 h-auto group-hover:translate-x-3 transition-transform duration-300" }}
+          {{ link_text ?? link }}
         </a>
       </div>
     {{ /if }}

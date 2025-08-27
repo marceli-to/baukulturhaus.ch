@@ -45,6 +45,24 @@ fields:
                   field:
                     type: text
                     display: Linktext
+            link_external:
+              display: Externer Link
+              instructions: 'Externer Link hinzufügen'
+              icon: link
+              fields:
+                -
+                  handle: link
+                  field:
+                    collections:
+                      - pages
+                    container: assets
+                    type: link
+                    display: Link
+                -
+                  handle: link_text
+                  field:
+                    type: text
+                    display: Linktext
             link_cta:
               display: '"Call to action"-Link'
               instructions: '"Call to action"-Link hinzfügen'

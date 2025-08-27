@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-y-10">
+<div class="flex flex-col gap-y-10 lg:gap-y-15">
   {{ list_item }}
     <div>
       <div class="font-chroma-medium">
@@ -6,6 +6,18 @@
         {{ title }}
       </div>
       <div>{{ text | nl2br }}</div>
+      {{ if link }}
+        <div class="my-10 md:my-20">
+          <a 
+            href="{{ link }}" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="group inline-flex items-center gap-x-8">
+            {{ partial:icons/arrow-link class="w-14 lg:w-16 h-auto group-hover:translate-x-3 transition-transform duration-300" }}
+            {{ link_text ?? link }}
+          </a>
+        </div>
+      {{ /if }}
     </div>
   {{ /list_item }}
 </div>

@@ -30,7 +30,7 @@
 
               <div>
                 {{ if quote }}
-                  <blockquote class="text-md md:text-vionex leading-[1.16] {{ name || position ? 'mb-3' : '' }}">
+                  <blockquote class="text-md text-vionex leading-[1.16] {{ name || position ? 'mb-3' : '' }}">
                     «{{ quote }}»
                   </blockquote>
                 {{ /if }}
@@ -52,11 +52,11 @@
         </div>
 
         <button class="swiper-btn-supporter-next absolute right-12 xl:right-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2">
-          {{ partial:icons/arrow-right class="w-full h-auto text-white xl:text-black" }}
+          {{ partial:icons/arrow-right class="w-full h-auto text-white" }}
         </button>
         
         <button class="swiper-btn-supporter-prev absolute left-12 xl:left-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2">
-          {{ partial:icons/arrow-left class="w-full h-auto text-white xl:text-black" }}
+          {{ partial:icons/arrow-left class="w-full h-auto text-white" }}
         </button>
 
       </div>

@@ -28,3 +28,15 @@ fields:
                   field:
                     type: textarea
                     display: Text
+                -
+                  handle: link
+                  field:
+                    type: link
+                    display: Link
+                    width: 50
+                -
+                  handle: link_text
+                  field:
+                    type: text
+                    display: 'Link Text'
+                    width: 50
