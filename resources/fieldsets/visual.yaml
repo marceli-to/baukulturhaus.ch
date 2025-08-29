@@ -1,6 +1,16 @@
 title: Visual
 fields:
   -
+    handle: claim
+    field:
+      type: textarea
+      display: Claim
+  -
+    handle: donation_status
+    field:
+      type: text
+      display: Spendenstand
+  -
     handle: image
     field:
       max_files: 1
@@ -15,8 +25,3 @@ fields:
       container: assets
       type: link
       display: Link
-  -
-    handle: donation_status
-    field:
-      type: text
-      display: Spendenstand
