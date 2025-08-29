@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Statamic\Statamic;
+use App\Modifiers\SwissNumber;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,6 +21,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Register custom modifiers
+        SwissNumber::register();
+        
         // Statamic::vite('app', [
         //     'resources/js/cp.js',
         //     'resources/css/cp.css',

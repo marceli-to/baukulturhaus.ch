@@ -15,10 +15,8 @@ fields:
       container: assets
       type: link
       display: Link
-      width: 50
   -
-    handle: link_text
+    handle: donation_status
     field:
       type: text
-      display: Linktext
-      width: 50
+      display: Spendenstand
