@@ -66,7 +66,7 @@ tabs:
                   display: Spezialelemente
                   icon: addon-boxes-stack
                   sets:
-                    Visual:
+                    visual:
                       display: Visual
                       instructions: 'Visual hinzufügen'
                       icon: media-image-picture-orientation
