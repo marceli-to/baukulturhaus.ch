@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
       modules: [Navigation, Pagination, Autoplay],
       loop: true,
       navigation: {
-        nextEl: '.swiper-btn-next',
-        prevEl: '.swiper-btn-prev',
+        nextEl: slideshowElement.parentElement.querySelector('.swiper-btn-next'),
+        prevEl: slideshowElement.parentElement.querySelector('.swiper-btn-prev'),
       },
       speed: 600,
       effect: 'slide',

@@ -10,6 +10,14 @@ main {
   @apply flex-1;
 }
 
+main article a {
+  @apply underline underline-offset-2 hover:no-underline;
+}
+
+main article p.md\:text-md a {
+  @apply !underline-offset-4;
+}
+
 p:not(:last-child) {
   @apply mb-18;
 }

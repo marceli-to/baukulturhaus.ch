@@ -12,7 +12,7 @@
           href="{{ link }}"
           target="_blank"
           aria-label="{{ link_text }}"
-          class="group flex items-start gap-x-7">
+          class="group flex items-start gap-x-7 !no-underline">
           {{ partial:icons/arrow-download class="mt-6 group-hover:rotate-45 transition-transform duration-300" }}
           <span class="decoration-1 underline underline-offset-4 group-hover:no-underline">
             {{ link_text }}
@@ -39,7 +39,7 @@
         <a 
           href="{{ link }}"
           aria-label="{{ link_text }}"
-          class="group text-md lg:text-lg text-center">
+          class="group text-md lg:text-lg text-center !no-underline">
           {{ partial:icons/arrow-link class="inline-block mr-4 -mt-2 w-22 lg:w-30 h-auto group-hover:translate-x-6 transition-transform duration-300" }}
           <span class="">
             {{ link_text }}
