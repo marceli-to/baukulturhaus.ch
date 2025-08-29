@@ -29,7 +29,7 @@ export default {
 
       screens: {
         'xs': '480px',
-        '2xl': '90rem',
+        '2xl': '100rem',
       },
 
       maxWidth: {
