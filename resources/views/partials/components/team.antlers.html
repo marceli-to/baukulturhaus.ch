@@ -39,13 +39,13 @@
       {{ /team }}
 
     </div>
-
-    <button class="swiper-btn-team-next absolute right-12 xl:right-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2">
-      {{ partial:icons/arrow-right class="w-full h-auto text-white" }}
-    </button>
     
-    <button class="swiper-btn-team-prev absolute left-12 xl:left-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2">
+    <button class="swiper-btn-team-prev absolute left-12 xl:left-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2" aria-label="Vorheriges Team-Mitglied">
       {{ partial:icons/arrow-left class="w-full h-auto text-white" }}
+    </button>
+
+    <button class="swiper-btn-team-next absolute right-12 xl:right-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2" aria-label="Nächstes Team-Mitglied">
+      {{ partial:icons/arrow-right class="w-full h-auto text-white" }}
     </button>
 
   </div>

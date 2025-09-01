@@ -50,13 +50,13 @@
           {{ /supporter }}
 
         </div>
-
-        <button class="swiper-btn-supporter-next absolute right-12 xl:right-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2">
-          {{ partial:icons/arrow-right class="w-full h-auto text-white" }}
-        </button>
         
-        <button class="swiper-btn-supporter-prev absolute left-12 xl:left-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2">
+        <button class="swiper-btn-supporter-prev absolute left-12 xl:left-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2" aria-label="Vorheriger Unterstützer">
           {{ partial:icons/arrow-left class="w-full h-auto text-white" }}
+        </button>
+
+        <button class="swiper-btn-supporter-next absolute right-12 xl:right-18 z-50 w-20 h-45 xl:w-22 xl:h-50 top-[calc(var(--img-h)/2)] -translate-y-1/2" aria-label="Nächster Unterstützer">
+          {{ partial:icons/arrow-right class="w-full h-auto text-white" }}
         </button>
 
       </div>
