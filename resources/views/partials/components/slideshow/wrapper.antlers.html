@@ -20,13 +20,13 @@
       {{ /images }}
     </div>
   </div>
-
-  <button class="swiper-btn-next w-20 h-45 xl:w-22 xl:h-50 absolute right-8 xl:-right-38 top-1/2 -translate-y-1/2 z-20">
-    {{ partial:icons/arrow-right class="w-full h-auto text-black" }}
-  </button>
   
-  <button class="swiper-btn-prev w-20 h-45 xl:w-22 xl:h-50 absolute left-8 xl:-left-38 top-1/2 -translate-y-1/2 z-20">
+  <button class="swiper-btn-prev w-20 h-45 xl:w-22 xl:h-50 absolute left-8 xl:-left-38 top-1/2 -translate-y-1/2 z-20" aria-label="Vorheriges Bild">
     {{ partial:icons/arrow-left class="w-full h-auto text-black" }}
+  </button>
+
+  <button class="swiper-btn-next w-20 h-45 xl:w-22 xl:h-50 absolute right-8 xl:-right-38 top-1/2 -translate-y-1/2 z-20" aria-label="Nächstes Bild">
+    {{ partial:icons/arrow-right class="w-full h-auto text-black" }}
   </button>
 
 </div>
