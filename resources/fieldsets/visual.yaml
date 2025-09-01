@@ -11,12 +11,21 @@ fields:
       type: text
       display: Spendenstand
   -
+    handle: image_mobile
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Bild (mobile)'
+      width: 50
+  -
     handle: image
     field:
       max_files: 1
       container: assets
       type: assets
       display: Bild
+      width: 50
   -
     handle: link
     field:
