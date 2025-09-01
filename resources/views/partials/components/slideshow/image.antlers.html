@@ -1,7 +1,7 @@
 <figure class="{{ wrapperClass }}">
   <img 
-    src="{{ glide:image preset="{{ preset ? 'md-{{ preset }}' : 'md' }}" }}" 
-    srcset="{{ glide:image preset="{{ preset ? preset : 'xl' }}" }} 1440w"
+    src="{{ glide:image preset="{{ preset ? 'xl-{{ preset }}' : 'xl' }}" }}" 
+    srcset="{{ glide:image preset="{{ preset ? '2xl-{{ preset }}' : '2xl' }}" }} 1440w"
     sizes="(max-width: 1024px) 100vw, 50vw"
     alt="{{ alt ? alt : image:alt }}" 
     aria-label="{{ alt ? alt : image:alt }}"
