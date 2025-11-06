@@ -1,0 +1,144 @@
+title: 'Aktionär:in Unternehmen'
+title_format: '{company_name}'
+tabs:
+  main:
+    display: Content
+    sections:
+      -
+        display: Firmendaten
+        fields:
+          -
+            handle: company_name
+            field:
+              type: text
+              display: Firmenname
+              validate:
+                - required
+          -
+            handle: location
+            field:
+              type: text
+              display: 'Strasse / Nr.'
+          -
+            handle: zip
+            field:
+              type: text
+              display: PLZ
+              width: 50
+          -
+            handle: city
+            field:
+              type: text
+              display: Ort
+              width: 50
+      -
+        display: 'Administrativer Kontakt'
+        fields:
+          -
+            handle: salutation_admin
+            field:
+              type: text
+              display: Anrede
+          -
+            handle: firstname_admin
+            field:
+              type: text
+              display: Vorname
+          -
+            handle: name_admin
+            field:
+              type: text
+              display: Name
+          -
+            handle: email_admin
+            field:
+              type: text
+              display: E-Mail
+              input_type: email
+          -
+            handle: phone_admin
+            field:
+              type: text
+              display: Telefon
+              input_type: tel
+      -
+        display: 'Angaben zeichnungsberechtigte Person'
+        fields:
+          -
+            handle: salutation_authorised_to_sign
+            field:
+              type: text
+              display: Anrede
+          -
+            handle: firstname_authorised_to_sign
+            field:
+              type: text
+              display: Vorname
+          -
+            handle: name_authorised_to_sign
+            field:
+              type: text
+              display: Name
+          -
+            handle: email_authorised_to_sign
+            field:
+              type: text
+              display: E-Mail
+              input_type: email
+          -
+            handle: phone_authorised_to_sign
+            field:
+              type: text
+              display: Telefon
+              input_type: tel
+          -
+            handle: location_authorised_to_sign
+            field:
+              type: text
+              display: Adresse
+          -
+            handle: zip_authorised_to_sign
+            field:
+              type: text
+              display: PLZ
+              width: 50
+          -
+            handle: city_authorised_to_sign
+            field:
+              type: text
+              display: Ort
+              width: 50
+          -
+            handle: dob_authorised_to_sign
+            field:
+              type: text
+              display: Geburtsdatum
+              instructions: 'Format: TT.MM.JJJJ'
+              instructions_position: below
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - shareholder_company
+              max_items: 1
+              listable: false
+              localizable: true

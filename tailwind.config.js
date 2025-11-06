@@ -49,6 +49,7 @@ export default {
         'vionex': '#860ABE',
         'verdara': '#1B9365',
         'solure': '#F4E154',
+         'greylon': '#999999',
       },
 
       fontSize: {

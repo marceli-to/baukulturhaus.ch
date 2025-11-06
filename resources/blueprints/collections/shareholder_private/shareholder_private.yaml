@@ -1,0 +1,87 @@
+title: 'Aktionär:in Privat'
+title_format: '{firstname} {name}'
+tabs:
+  main:
+    display: Content
+    sections:
+      -
+        display: Daten
+        fields:
+          -
+            handle: salutation
+            field:
+              type: text
+              display: Anrede
+          -
+            handle: firstname
+            field:
+              type: text
+              display: Vorname
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              validate:
+                - required
+          -
+            handle: location
+            field:
+              type: text
+              display: 'Strasse / Nr.'
+          -
+            handle: zip
+            field:
+              type: text
+              display: PLZ
+              width: 50
+          -
+            handle: city
+            field:
+              type: text
+              display: Ort
+              width: 50
+          -
+            handle: email
+            field:
+              type: text
+              display: E-Mail
+              input_type: email
+          -
+            handle: phone
+            field:
+              type: text
+              display: Telefon
+              input_type: tel
+          -
+            handle: dob
+            field:
+              type: text
+              display: Geburtsdatum
+              instructions: 'Format: TT.MM.JJJJ'
+              instructions_position: below
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - shareholder_private
+              max_items: 1
+              listable: false
+              localizable: true

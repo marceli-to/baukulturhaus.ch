@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DownloadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,3 +13,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::middleware('statamic.cp.authenticated')->group(function () {
+  Route::get('/shareholder/{id}/download-zip', [DownloadController::class, 'downloadZip'])
+    ->name('shareholder.download-zip');
+  Route::get('/shareholder/{id}/delete-zip', [DownloadController::class, 'deleteZip'])
+    ->name('shareholder.delete-zip');
+});

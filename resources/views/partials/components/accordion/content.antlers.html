@@ -64,6 +64,14 @@
       </div>
     {{ /if }}
 
+    {{ if type == 'form_shareholder_private' }}
+      {{ partial:components/forms/shareholder/private }}
+    {{ /if }}
+
+    {{ if type == 'form_shareholder_company' }}
+      {{ partial:components/forms/shareholder/company }}
+    {{ /if }}
+
   {{ /content }}
 </div>
 

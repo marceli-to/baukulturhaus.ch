@@ -98,3 +98,11 @@ fields:
                     default: true
                     type: toggle
                     display: 'Google Maps anzeigen?'
+            form_shareholder_private:
+              display: "Formular 'Aktionär:in Privat'"
+              icon: form-text-field
+              fields: {  }
+            form_shareholder_company:
+              display: "Formular 'Aktionär:in Unternehmen'"
+              icon: form-text-field
+              fields: {  }
