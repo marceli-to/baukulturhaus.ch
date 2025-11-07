@@ -54,15 +54,15 @@ class ShareholderPrivateController extends Controller
 
         $entry->save();
 
+        // Refresh Statamic Stache to ensure the new entry is immediately available
+        \Statamic\Facades\Stache::refresh();
+
         // Add entry ID and file info to data for notifications
         $notificationData = array_merge($data, [
             'entry_id' => $entry->id(),
             'zip_file' => $zipPath,
             'unique_id' => $uniqueId,
         ]);
-
-        // Clear Statamic Stache to ensure the new entry is immediately available
-        \Statamic\Facades\Stache::clear();
 
         // Send notification
         Notification::route('mail', env('MAIL_TO'))->notify(new OwnerInformation($notificationData));
