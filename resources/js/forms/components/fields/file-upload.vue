@@ -7,6 +7,7 @@
       ]">
       <input
         :id="name"
+        ref="fileInput"
         type="file"
         :name="name"
         :multiple="allowMultiple"
@@ -85,12 +86,19 @@ const displayLabel = computed(() => {
   return `${files.length} Dateien ausgewählt`;
 });
 
+const fileInput = ref(null);
+
 const handleFileChange = (event) => {
   const files = Array.from(event.target.files || []);
   emit('update:modelValue', files);
   // Clear error when files are selected
   if (files.length > 0) {
     emit('update:error', '');
+  } else {
+    // Reset input if no files selected (user cancelled)
+    if (fileInput.value) {
+      fileInput.value.value = '';
+    }
   }
 };
 </script>
