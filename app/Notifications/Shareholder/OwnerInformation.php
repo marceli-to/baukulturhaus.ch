@@ -25,7 +25,7 @@ class OwnerInformation extends Notification
     {
         return (new MailMessage)
             ->from(env('MAIL_FROM_ADDRESS'))
-            ->replyTo($this->data['email'])
+            ->replyTo(env('MAIL_REPLY_TO'))
             ->subject('Aktionär:in (Privat) – ' . $this->data['firstname'] . ' ' . $this->data['name'])
             ->markdown('notifications.shareholder.private.owner-information', ['data' => $this->data]);
     }
