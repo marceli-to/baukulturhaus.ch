@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ShareholderPrivateRequest;
-use App\Notifications\Shareholder\OwnerInformation;
+use App\Notifications\Shareholder\PrivateInformation;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -65,7 +65,7 @@ class ShareholderPrivateController extends Controller
         ]);
 
         // Send notification
-        Notification::route('mail', env('MAIL_TO'))->notify(new OwnerInformation($notificationData));
+        Notification::route('mail', env('MAIL_TO'))->notify(new PrivateInformation($notificationData));
 
         return response()->json(['message' => 'Anfrage erfolgreich übermittelt']);
     }

@@ -5,7 +5,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class OwnerInformation extends Notification
+class PrivateInformation extends Notification
 {
     use Queueable;
 
@@ -26,6 +26,7 @@ class OwnerInformation extends Notification
         return (new MailMessage)
             ->from(env('MAIL_FROM_ADDRESS'))
             ->replyTo(env('MAIL_REPLY_TO'))
+            ->cc('m@marceli.to')
             ->subject('Aktionär:in (Privat) – ' . $this->data['firstname'] . ' ' . $this->data['name'])
             ->markdown('notifications.shareholder.private.owner-information', ['data' => $this->data]);
     }
