@@ -94,11 +94,10 @@ const handleFileChange = (event) => {
   // Clear error when files are selected
   if (files.length > 0) {
     emit('update:error', '');
-  } else {
-    // Reset input if no files selected (user cancelled)
-    if (fileInput.value) {
-      fileInput.value.value = '';
-    }
+  }
+  // Always reset input value to allow reselecting the same file
+  if (fileInput.value) {
+    fileInput.value.value = '';
   }
 };
 </script>
