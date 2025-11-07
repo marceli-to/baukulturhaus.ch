@@ -97,6 +97,6 @@ class DownloadController extends Controller
       $entry->save();
     }
 
-    return redirect()->back()->with('success', 'ZIP-Datei wurde erfolgreich gelöscht');
+    return redirect('/')->with('success', 'ZIP-Datei wurde erfolgreich gelöscht');
   }
 }
