@@ -115,6 +115,13 @@ tabs:
               display: Geburtsdatum
               instructions: 'Format: TT.MM.JJJJ'
               instructions_position: below
+          -
+            handle: documents
+            field:
+              type: text
+              display: Dokumente
+              input_type: url
+              read_only: true
   sidebar:
     display: Sidebar
     sections:
