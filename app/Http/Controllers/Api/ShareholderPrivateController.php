@@ -54,6 +54,12 @@ class ShareholderPrivateController extends Controller
 
         $entry->save();
 
+        // Update entry with documents URL now that we have the entry ID
+        if ($zipPath) {
+            $entry->set('documents', route('shareholder.download-zip', $entry->id()));
+            $entry->save();
+        }
+
         // Refresh Statamic Stache to ensure the new entry is immediately available
         \Statamic\Facades\Stache::refresh();
 

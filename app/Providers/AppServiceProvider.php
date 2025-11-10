@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // Register custom modifiers
         SwissNumber::register();
-        
+
         // Statamic::vite('app', [
         //     'resources/js/cp.js',
         //     'resources/css/cp.css',
