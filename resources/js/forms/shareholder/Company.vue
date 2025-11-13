@@ -214,15 +214,18 @@
               @update:error="errors.power_of_attorney = $event" />
 
               <div class="mt-10 md:mt-15">
-                <a 
-                  href="/assets/downloads/vollmacht.pdf" 
-                  target="_blank"
-                  class="underline-offset-2 hover:underline flex items-center gap-x-7 md:gap-x-10">
-                  <svg class="lg:w-12 lg:h-auto" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3594 1.89488V9.99999H2.26706L2.25427 8.61931H7.98155L0.566772 1.19175L1.56393 0.194595L8.9787 7.62215L8.96592 1.89488H10.3594Z" fill="currentColor"></path>
-                  </svg>
-                  Vollmacht herunterladen
-                </a>
+                <p>
+                  <a 
+                    href="/assets/downloads/vollmacht_jurist_person.pdf" 
+                    target="_blank"
+                    class="underline-offset-2 hover:underline flex items-center gap-x-7 md:gap-x-10">
+                    <svg class="lg:w-12 lg:h-auto" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3594 1.89488V9.99999H2.26706L2.25427 8.61931H7.98155L0.566772 1.19175L1.56393 0.194595L8.9787 7.62215L8.96592 1.89488H10.3594Z" fill="currentColor"></path>
+                    </svg>
+                    Vollmacht herunterladen
+                  </a>
+                </p>
+                <p><strong>WICHTIG:</strong> Original Vollmacht Zustellung per Post z.H. Baukulturhaus Winterthur, Koordinationsstelle, Bürglistr. 31, 8400 Winterthur</p>
               </div>
               
           </form-group>
