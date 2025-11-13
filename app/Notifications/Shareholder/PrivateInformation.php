@@ -27,7 +27,7 @@ class PrivateInformation extends Notification
             ->from(env('MAIL_FROM_ADDRESS'))
             ->replyTo(env('MAIL_REPLY_TO'))
             ->subject('Aktionär:in (Privat) – ' . $this->data['firstname'] . ' ' . $this->data['name'])
-            ->markdown('notifications.shareholder.private.owner-information', ['data' => $this->data]);
+            ->markdown('notifications.shareholder.private.information', ['data' => $this->data]);
     }
 
     public function toArray($notifiable)

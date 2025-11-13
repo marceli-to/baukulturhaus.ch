@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ShareholderCompanyRequest;
 use App\Notifications\Shareholder\CompanyInformation;
+use App\Notifications\Shareholder\CompanyNotification;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -78,10 +80,31 @@ class ShareholderCompanyController extends Controller
             'entry_id' => $entry->id(),
             'zip_file' => $zipPath,
             'unique_id' => $uniqueId,
+            'commercial_register_path' => $commercialRegisterPath,
+            'id_copy_path' => $idCopyPath,
+            'power_of_attorney_path' => $powerOfAttorneyPath,
         ]);
 
-        // Send notification
-        Notification::route('mail', env('MAIL_TO'))->notify(new CompanyInformation($notificationData));
+        // Send notification to admin
+        try {
+            Notification::route('mail', env('MAIL_TO'))->notify(new CompanyInformation($notificationData));
+        } catch (\Exception $e) {
+            Log::error('Failed to send CompanyInformation notification to admin', [
+                'error' => $e->getMessage(),
+                'entry_id' => $entry->id(),
+            ]);
+        }
+
+        // Send confirmation notification to user
+        try {
+            Notification::route('mail', $data['email_admin'])->notify(new CompanyNotification($notificationData));
+        } catch (\Exception $e) {
+            Log::error('Failed to send CompanyNotification confirmation to user', [
+                'error' => $e->getMessage(),
+                'entry_id' => $entry->id(),
+                'user_email' => $data['email_admin'],
+            ]);
+        }
 
         return response()->json(['message' => 'Anfrage erfolgreich übermittelt']);
     }

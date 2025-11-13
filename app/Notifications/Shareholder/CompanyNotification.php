@@ -5,7 +5,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class CompanyInformation extends Notification
+class CompanyNotification extends Notification
 {
     use Queueable;
 
@@ -26,8 +26,8 @@ class CompanyInformation extends Notification
         return (new MailMessage)
             ->from(env('MAIL_FROM_ADDRESS'))
             ->replyTo(env('MAIL_REPLY_TO'))
-            ->subject('Aktionär:in (Firma) – ' . $this->data['company_name'])
-            ->markdown('notifications.shareholder.company.information', ['data' => $this->data]);
+            ->subject('Baukulturhaus Angaben Aktionariat')
+            ->markdown('notifications.shareholder.company.confirmation', ['data' => $this->data]);
     }
 
     public function toArray($notifiable)

@@ -167,15 +167,15 @@ const formSuccess = ref(false);
 const formError = ref(false);
 
 const form = ref({
-  salutation: '',
-  firstname: '',
-  name: '',
-  location: '',
-  zip: '',
-  city: '',
-  email: '',
-  phone: '',
-  dob: '',
+  salutation: 'Herr',
+  firstname: 'Max',
+  name: 'Mustermann',
+  location: 'Musterstrasse 123',
+  zip: '8400',
+  city: 'Winterthur',
+  email: 'marcel.stadelmann@gmail.com',
+  phone: '+41 52 123 45 67',
+  dob: '15.03.1980',
   identity_document: [],
   power_of_attorney: []
 });
