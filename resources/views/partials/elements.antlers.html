@@ -30,3 +30,9 @@
 {{ if type == 'visual' }}
   {{ partial:components/visual }} 
 {{ /if }}
+
+{{ if type == 'agenda_entry' }}
+  <div class="container-narrow">
+    {{ partial:components/agenda_entry }}
+  </div>
+{{ /if }}

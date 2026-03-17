@@ -79,6 +79,20 @@ fields:
               fields:
                 -
                   import: single_image
+            agenda_entry:
+              display: 'Agenda Eintrag'
+              instructions: 'Agenda Eintrag hinzufügen'
+              icon: calendar-date
+              fields:
+                -
+                  import: agenda_entry
+            rental_premises:
+              display: 'Vermietung Räumlichkeiten'
+              instructions: 'Vermietung Räumlichkeiten hinzufügen'
+              icon: home-house
+              fields:
+                -
+                  import: premises
         special_elements:
           display: Spezialelemente
           icon: addon-boxes-stack

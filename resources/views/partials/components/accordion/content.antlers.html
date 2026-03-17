@@ -72,6 +72,18 @@
       {{ partial:components/forms/shareholder/company }}
     {{ /if }}
 
+    {{ if type == 'agenda_entry' }}
+      <div class="container-narrow">
+        {{ partial:components/agenda_entry }}
+      </div>
+    {{ /if }}
+
+    {{ if type == 'rental_premises' }}
+      <div class="container-narrow">
+        {{ partial:components/premises }}
+      </div>
+    {{ /if }}
+
   {{ /content }}
 </div>
 

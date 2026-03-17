@@ -62,6 +62,13 @@ tabs:
                       fields:
                         -
                           import: listing
+                    agenda_entry:
+                      display: Agenda
+                      instructions: 'Agenda Eintrag hinzufügen'
+                      icon: calendar-date
+                      fields:
+                        -
+                          import: agenda_entry
                 special_elements:
                   display: Spezialelemente
                   icon: addon-boxes-stack

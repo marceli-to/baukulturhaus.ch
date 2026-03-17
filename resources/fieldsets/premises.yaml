@@ -1,0 +1,43 @@
+title: Räumlichkeiten
+fields:
+  -
+    handle: premises
+    field:
+      type: replicator
+      display: Räumlichkeiten
+      sets:
+        neue_setgruppe:
+          display: 'Neue Setgruppe'
+          sets:
+            premise:
+              display: Räumlichkeit
+              icon: home-house
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Titel
+                -
+                  import: single_image
+                -
+                  import: editor
+                -
+                  handle: informations
+                  field:
+                    max_columns: 2
+                    type: table
+                    display: Informationen
+                -
+                  handle: download
+                  field:
+                    container: assets
+                    type: link
+                    display: Download
+                    width: 50
+                -
+                  handle: download_text
+                  field:
+                    type: text
+                    display: 'Link Text'
+                    width: 50

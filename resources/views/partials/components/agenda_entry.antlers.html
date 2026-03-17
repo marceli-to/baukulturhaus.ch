@@ -1,0 +1,21 @@
+<div class="{{ text_color }} my-35 md:my-85 text-center">
+
+  <h2 class="{{ text_color }} text-center text-md lg:text-lg text-pretty leading-[1.15] mb-10 {{ class }}">
+    {{ agenda_entry_title }}
+  </h2>
+
+  {{ partial:components/editor }}
+
+  <div class="mt-10">
+    <a 
+      href="{{ link }}" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="group inline-flex items-center gap-x-8 !no-underline">
+      {{ partial:icons/arrow-link class="w-14 lg:w-16 h-auto group-hover:translate-x-3 transition-transform duration-300" }}
+      <span class="underline underline-offset-2 decoration-1 group-hover:no-underline">
+        Mehr erfahren
+      </span>
+    </a>
+  </div>
+</div>

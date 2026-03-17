@@ -1,0 +1,17 @@
+title: 'Agenda Eintrag'
+fields:
+  -
+    handle: agenda_entry_title
+    field:
+      type: text
+      display: Titel
+  -
+    import: editor
+  -
+    handle: link
+    field:
+      collections:
+        - pages
+      container: assets
+      type: link
+      display: Link
