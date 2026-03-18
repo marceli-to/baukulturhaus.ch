@@ -25,7 +25,7 @@ fields:
                 -
                   handle: informations
                   field:
-                    max_columns: 2
+                    max_columns: 3
                     type: table
                     display: Informationen
                 -
