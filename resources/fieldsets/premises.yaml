@@ -1,6 +1,15 @@
 title: Räumlichkeiten
 fields:
   -
+    handle: premises_title
+    field:
+      type: text
+      display: Titel
+  -
+    import: editor
+  -
+    import: color_selector
+  -
     handle: premises
     field:
       type: replicator

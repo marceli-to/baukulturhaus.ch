@@ -69,6 +69,13 @@ tabs:
                       fields:
                         -
                           import: agenda_entry
+                    premises:
+                      display: Räumlichkeiten
+                      instructions: 'Räumlichkeiten hinzufügen'
+                      icon: home-house
+                      fields:
+                        -
+                          import: premises
                 special_elements:
                   display: Spezialelemente
                   icon: addon-boxes-stack
